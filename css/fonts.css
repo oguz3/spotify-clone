@@ -1,0 +1,17 @@
+/*Nav fonts*/
+.navigation-link{
+    padding: 0px 17px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+    font-family: Helvetica, Arial, sans-serif;
+}
+.navigation-link.faded{
+    color: var(--faded);
+}
+.navigation-link:hover{
+    color: var(--hvrgreen);
+}
+/*Nav fonts*/
