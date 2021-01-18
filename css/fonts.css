@@ -1,12 +1,25 @@
-/*Nav fonts*/
+@font-face {
+    font-family: 'circular-black';
+    src: url('../assets/CircularStd-Black.otf'); 
+} 
+body{
+    font-family: "DM Sans", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+/*
+    Nav fonts
+*/
 .navigation-link{
     padding: 0px 17px;
-    text-decoration: none;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
     color: var(--white);
-    font-family: Helvetica, Arial, sans-serif;
+}
+.navigation-link.son{
+    padding-right: 0px;
 }
 .navigation-link.faded{
     color: var(--faded);
@@ -14,4 +27,144 @@
 .navigation-link:hover{
     color: var(--hvrgreen);
 }
-/*Nav fonts*/
+.sidenav .sidenav-link{
+    cursor: pointer;
+    padding: 0 0 25px;
+    display: block;
+    line-height: 1;
+    font-weight: 700;
+    font-size: 34px;
+    color: var(--white);
+}
+.sidenav .sidenav-link.light{
+    font-weight: 400;
+    font-size: 26px;
+}
+.sidenav .sidenav-link:hover{
+    color: var(--hvrgreen);
+}
+/*
+    Nav fonts
+*/
+
+.hm_cont small{
+    font-size: 12px;
+    color: var(--white);
+    font-weight: 700;
+}
+.hm_cont h1{
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+    font-size: 80px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--white);
+    font-family: circular-black, Helvetica, Arial, sans-serif;
+}
+.hm_cont h3{
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 900;
+    line-height: 1.4;
+    color: var(--white);
+    font-family: circular-black, Helvetica, Arial, sans-serif;
+}
+.last_listen h1{
+    margin-bottom: 80px;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--white);
+    font-family: circular-black, Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+.last_listen .ll_card span h5{
+    background-color: rgba(30, 50, 100, 0.25);
+    padding: 4px 16px;
+    display: inline-block;
+    margin: 16px 0 16px -7px;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--white);
+    font-weight: 400;
+}
+.last_listen .ll_card span h2{
+    margin: 0px;
+    margin-left: -25px;
+    width: 125%;
+    position: relative;
+    z-index: 2;
+    background-color: #1E3264;
+    padding: 12px 40px;
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    font-family: circular-black, Helvetica, Arial, sans-serif;
+}
+.last_listen .ll_card span a{
+    display: inline-block;
+    color: var(--hvrgreen);
+    font-size: 13px;
+    line-height: 14px;
+    font-weight: 700;
+    margin-left: 22px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+/*
+    Footer
+*/
+.footer-nav p{
+    margin: 20px 0;
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-family: circular-black, Helvetica, Arial, sans-serif;
+}
+.footer-nav .fn-left div,
+.footer-nav .fn-mid div,
+.footer-nav .fn-right div{
+    margin: 0;
+}
+.footer-nav div a{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 3px 0 15px;
+    color: var(--white);
+}
+.footer-nav div a:hover{
+    color: var(--hvrgreen);
+}
+footer .footer_bot ul li a{
+    font-size: 12px;
+    color: var(--secondary);
+    padding: 1em 0;
+    display: inline-block;
+}
+footer .footer_bot ul li a:hover{
+    color: var(--hvrgreen);
+}
+footer .footer_bot span{
+    font-size: 12px;
+    color: var(--secondary);
+}
+footer .tr a{
+    color: var(--secondary);
+    font-size: 12px;
+}
+footer .tr a:hover{
+    color: var(--hvrgreen);
+}
+/*
+    Footer
+*/
