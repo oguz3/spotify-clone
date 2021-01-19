@@ -14,10 +14,10 @@ A front-end clone project of the Spotify website. The project was created using 
 
 Homepage
 
-![Screenshot](https://oguzhanulukaya.net/projects/spotify_ss/web.gif)
+![Screenshot](https://oguzhanulukaya.net/projects/spotify_ss/web.PNG)
 
 ## Mobile UI
 
 Homepage
 
-![Screenshot](https://oguzhanulukaya.net/projects/spotify_ss/mobil.gif)
+![Screenshot](https://oguzhanulukaya.net/projects/spotify_ss/mobil.PNG)
