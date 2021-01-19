@@ -7,3 +7,10 @@ function toggler(x) {
     opacity.classList.toggle("opa");
     document.body.classList.toggle("opa");
 }
+//Profile button
+function profile() {
+    var profileMenu = document.getElementById("profileMenu");
+    profileMenu.classList.toggle("active");
+    var svg = document.querySelector(".profile-title svg");
+    svg.classList.toggle("transform");
+}

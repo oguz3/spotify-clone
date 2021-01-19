@@ -2,10 +2,14 @@
     --fadednav: rgba(0, 0, 0, 0.6);
 	--black: #000;
 	--white: #fff;
-	--faded: #d9dadc;
+    --faded: #d9dadc;
+    --linkgreen: #1DB954;
     --hvrgreen: #1ed760;
     --homebgcolor:#2D46B9;
     --secondary: #919496;
+}
+html{
+    scroll-behavior: smooth;
 }
 * {
 	-webkit-box-sizing: border-box;
@@ -57,10 +61,12 @@ header {
 	margin: 0px;
 	width: fit-content;
 	margin-left: auto;
-	display: flex;
+    display: flex;
+    align-items: center;
 }
 .navigation ul li {
-	display: inline-block;
+    display: inline-block;
+    position: relative;
 }
 .header .logo {
 	width: 132px;
@@ -77,12 +83,146 @@ header {
 	background-color: var(--white);
 	margin: auto 17px;
 }
-.container-togg {
+.profile_btn{
+    margin-left: 7px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none;
+    font: inherit;
+    font-weight: 700;
+    outline: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+}
+.usericon{
+    border: 2px solid var(--white);
+    margin: auto 6px auto 10px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+.profile_btn .usericon{
+    display: inline-block;
+}
+.usericon svg{
+    padding: 7px;
+    fill: var(--white);
+    height: 100%;
+    width: 100%;
+}
+.profile-title{
+    margin: auto 0;
+    display: inline-block;
+}
+.profile-title span{
+    margin: auto 0 auto 10px;
+    display: inline-block;
+    color: var(--white);
+}
+.profile-title svg{
+    margin: auto 0 auto 6px;
+    fill: var(--white);
+    width: 12px;
+    height: 12px;
+}
+.profile_btn:hover .profile-title span{
+    color: var(--hvrgreen);
+}
+.profile_btn:hover .usericon{
+    border-color: var(--hvrgreen);
+}
+.profile_btn:hover .usericon svg,
+.profile_btn:hover .profile-title svg{
+    fill: var(--hvrgreen);
+}
+.profileMenu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin-top: 8px;
+    right: -11px;
+}
+.profileMenu.active{
+    display: block !important;
+}
+.profile-title svg.transform{
+    transform: rotateZ(180deg);
+}
+.profileMenu ul{
+    margin: 2px 0 0;
+    background-color: var(--white);
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: baseline;
+    min-width: 160px;
+}
+.profileMenu ul:before{
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    right: 7px;
+    border-bottom: 16px solid var(--white);
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -12px;
+}
+.profileMenu ul li{
+    padding: 0;
+    display: block;
+    letter-spacing: 0;
+}
+.profileMenu ul li a{
+    padding: 4px 16px 3px;
+    display: block;
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--black);
+    text-align: left;
+}
+.profileMenu ul li a.faded{
+    color: var(--secondary);
+}
+.profileMenu ul li a:hover{
+    color: var(--hvrgreen);
+}
+.profile_icon-mobile{
+    margin-left: auto;
+    display: none;
+    align-items: center;
+}
+.container-togg{
 	display: none;
     cursor: pointer;
     margin-left: auto;
     position: relative;
     z-index: 99;
+}
+.usericon {
+	display: none;
+    cursor: pointer;
+    margin-left: auto;
+    position: relative;
 }
 .bar1,
 .bar2,
@@ -119,7 +259,7 @@ header {
     opacity: 0;
     border-width: 0;
     margin: 0;
-    padding: 38px;
+    padding: 38px 0px 38px 0px;
     max-width: 100vw !important;
 }
 .sidenav ul{
@@ -152,6 +292,7 @@ header {
 .sidenav.open {
     width: 447px !important;
     opacity: 1 !important;
+    padding: 38px !important;
 }
 /*
     Header
@@ -224,18 +365,44 @@ header {
     padding-right: 10px;
     margin: 0px;
 }
+.hm_card{
+    position: relative;
+    cursor: pointer;
+}
 .box img {
     width: 100%;
     height: 233px;
     object-fit: cover;
+}
+.box_details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+}
+.play-icon{
+    width: 25px;
+    height: 25px;
+}
+.hm_card:hover .box_details{
+    opacity: 1;
 }
 .arrow-scroll-down{
     width: 32px;
     height: 43px;
     display: block;
     margin: 0 auto;
-    padding-top: 30px;
-    padding-bottom: 130px;
+    padding-top: 40px;
+    padding-bottom: 120px;
 }
 .arrow-scroll-down svg{
     fill: #fff;
@@ -290,6 +457,26 @@ header {
     top: 0;
     background-color: #ffffff;
     opacity: 0.05;
+}
+.home_links{
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+.home_links .container.links{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+}
+.home_links .account_link,
+.home_links .app_link,
+.home_links .web_link{
+    display: flex;
+    flex-direction: column;
+}
+.home_links .account_link a,
+.home_links .app_link a,
+.home_links .web_link a{
+    margin-top: auto;
 }
 
 /*
@@ -432,32 +619,3 @@ footer .footer_bot ul li{
 /*
     Footer
 */
-/**/
-/*
-    Media
-*/
-@media screen and (max-width: 1200px) {
-	.container {
-		width: 970px;
-	}
-}
-@media screen and (max-width: 992px) {
-	.container {
-		max-width: 750px;
-		width: 100%;
-    }
-    .header {
-        grid-template-columns: 100px auto;
-        height: 54px;
-    }
-    .header .logo {
-        width: 88px;
-        height: 28px;
-    }
-	.navigation {
-		display: none;
-	}
-	.container-togg {
-		display: inline-block;
-    }
-}

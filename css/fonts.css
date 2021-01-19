@@ -8,6 +8,48 @@ body{
 a{
     text-decoration: none;
 }
+.title-1{
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--black);
+    font-family: circular-black, Helvetica, Arial, sans-serif;
+}
+.subtitle-1{
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    font-weight: 900;
+    line-height: 1.4;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    color: var(--black);
+    font-family: circular-black, Helvetica, Arial, sans-serif;
+}
+.parag-1{
+    margin: .5em 0 1em;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--black);
+}
+.a_link{
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--linkgreen);
+    text-decoration: none;
+    transition-duration: 0.3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: normal;
+}
+.a_link:hover, .a_link:focus {
+    color: var(--hvrgreen);
+    text-decoration: none;
+}
 /*
     Nav fonts
 */
@@ -71,6 +113,14 @@ a{
     line-height: 1.4;
     color: var(--white);
     font-family: circular-black, Helvetica, Arial, sans-serif;
+}
+.hm_card .box_details h2{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 16px 0 0;
+    letter-spacing: -0.015em;
+    line-height: 1.3;
+    color: var(--white);
 }
 .last_listen h1{
     margin-bottom: 80px;
