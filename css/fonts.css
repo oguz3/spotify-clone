@@ -18,6 +18,15 @@ a{
     color: var(--black);
     font-family: circular-black, Helvetica, Arial, sans-serif;
 }
+.title-2{
+    margin-top: 30px;
+    margin-bottom: 0px;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.25px;
+    line-height: 1.5;
+    color: var(--white);
+}
 .subtitle-1{
     font-size: 24px;
     letter-spacing: -0.01em;
@@ -94,7 +103,8 @@ a{
     color: var(--white);
     font-weight: 700;
 }
-.hm_cont h1{
+.hm_cont h1,
+.premium-head h1{
     font-weight: 900;
     letter-spacing: -0.04em;
     line-height: 1.15;
@@ -103,6 +113,9 @@ a{
     margin-bottom: 0;
     color: var(--white);
     font-family: circular-black, Helvetica, Arial, sans-serif;
+}
+.premium-head h1{
+    letter-spacing: 0.25px;
 }
 .hm_cont h3{
     font-size: 24px;
@@ -165,7 +178,58 @@ a{
     margin-top: 20px;
     letter-spacing: 1px;
 }
-
+.premium-head p{
+    font-size: 12px;
+    color: var(--white);
+    margin: 0px;
+}
+.premium-head p small{
+    font-size: 12px;
+    color: var(--white);
+}
+.premium-head p small a{
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--white);
+    text-decoration: underline;
+}
+.why-premium h2{
+    text-align: center;
+}
+.why-card h6{
+    font-size: 21px;
+    padding: 0px;
+    line-height: 1.3em;
+    font-weight: 700;
+    margin: 0 auto 10px auto;
+}
+.why-card p{
+    line-height: 1.5;
+    font-size: 16px;
+    padding: 0px;
+    margin: 0;
+    font-weight: 400;
+    margin: 0px auto;
+}
+.plans-text h2{
+    font-size: 38px;
+    letter-spacing: -1.6px;
+    line-height: 1;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 900;
+    font-family: circular-black, Helvetica, Arial, sans-serif;
+}
+.plans-text p{
+    font-size: 16px;
+    font-weight: normal;
+    margin: 10px 0px;
+    text-align: center;
+    padding: 0px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
 /*
     Footer
 */

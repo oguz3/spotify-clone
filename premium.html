@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/fonts.css" />
+		<link rel="stylesheet" href="./css/animation.css">
+		<link rel="stylesheet" href="./css/responsive.css">
+		<title>Dinlemek her şeydir - Spotify</title>
+		<link rel="icon" href="https://www.scdn.co/i/_global/favicon.png" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+			rel="stylesheet"
+        />
+	</head>
+	<body>
+		<!--Header-->
+		<custom-header></custom-header>
+		<!--Header-->
+
+        <div class="premium-head">
+            <div class="container">
+                <h1>Premium'a geç. Mutlu ol.</h1>
+                <h2 class="title-2">Premium'un sesi inanılmazdır. Tüm cihazlarında reklamsız müziğin tadını çıkar.*</h2>
+                <a class="black_btn" href="#plans">PLANLARI GÖRÜNTÜLE</a>
+                <p><small><a href="">*Şartlar ve koşullar</a> geçerlidir.</small></p>
+            </div>
+        </div>
+
+        <div class="why-premium">
+            <div class="container">
+                <h2 class="title-1">Neden Premium'a yükseltmelisin?</h2>
+            </div>
+            <div class="container why-cards">
+                <why-card image="./assets/benefit_1.png"
+                          title="Müzik indir."
+                          text="İstediğin yerde dinle.">
+                </why-card>
+                <why-card image="./assets/benefit_2.png"
+                          title="Reklam kesintisi yok."
+                          text="Aralıksız müziğin keyfini çıkar.">
+                </why-card>
+                <why-card image="./assets/benefit_3.png"
+                          title="İstediğin şarkıyı çal."
+                          text="Cep telefonunda bile.">
+                </why-card>
+                <why-card image="./assets/benefit_4.png"
+                          title="Sınırsız şarkı atlama hakkı."
+                          text="Sonraki tuşuna basman yeter.">
+                </why-card>
+            </div>
+        </div>
+        
+        <div id="plans" class="premium-plans">
+            <div class="container plans-text">
+                <h2>Premium'unu seç</h2>
+                <p>Spotify'ı istediğin yerde, istediğin cihazda dinleyebilirsin.</p>
+            </div>
+            <div class="container plans-container">
+                <pay-plan prepay="Ön ödemeli planlar mevcuttur"
+                          name="Bireysel"
+                          price="17,99 TL/ay"
+                          account="1 hesap"
+                          list-1="Müziklerini reklamsız dinle"
+                          list-2="Her yerde çal, hatta çevrimdışı dinle"
+                          list-3="İstediğin zaman çal"
+                          list-4="Ön öde veya üye ol"
+                          btntext="KULLANMAYA BAŞLA"
+                          smalltesxt="*Şartlar ve koşullar geçerlidir."
+                          active="false">
+                </pay-plan>
+                <pay-plan prepay=""
+                          name="Duo"
+                          price="23,99 TL/ay"
+                          account="2 hesap"
+                          list-1="Aynı çatı altında yaşayan çiftler için 2 Premium hesabı"
+                          list-2="Duo Mix: İki kişi için bir çalma listesi, ikinizin tadını çıkaracağı müziklerle düzenli olarak güncellenir"
+                          list-3="Kesintisiz müzik dinleme, çevrimdışı çalma, istediğin zaman çalma"
+                          list-4=""
+                          btntext="KULLANMAYA BAŞLA"
+                          smalltesxt="*Şartlar ve koşullar geçerlidir."
+                          active="false">
+                </pay-plan>
+                <pay-plan prepay=""
+                          name="Aile"
+                          price="26,99 TL/ay"
+                          account="6 hesaba kadar"
+                          list-1="Aynı çatı altında yaşayan aile üyeleri için 6 ayrı Premium hesabı"
+                          list-2="Aile Mix'i: Ailen için bir çalma listesi, hepinizin tadını çıkaracağı müziklerle düzenli olarak güncellenir"
+                          list-3="Sansürsüz müziği engelle"
+                          list-4="Kesintisiz müzik dinleme, çevrimdışı çalma, istediğin zaman çalma"
+                          btntext="KULLANMAYA BAŞLA"
+                          smalltesxt="*Şartlar ve koşullar geçerlidir.Aynı adreste oturan aileler için."
+                          active="false">
+                </pay-plan>
+                <pay-plan prepay=""
+                          name="Öğrenci"
+                          price="8,99 TL/ay"
+                          account="1 hesap"
+                          list-1="Yararlanabilecek üniversite öğrencilerine özel indirim"
+                          list-2="Müziklerini reklamsız dinle"
+                          list-3="Her yerde çal, hatta çevrimdışı dinle"
+                          list-4="İstediğin zaman çal"
+                          btntext=""
+                          smalltesxt=""
+                          active="true">
+                </pay-plan>
+            </div>
+        </div>
+
+
+		<!--Footer-->
+		<custom-footer></custom-footer>
+		<!--Footer-->
+
+		<div id="opacity" class="opacity"></div>
+		<script src="./component/header.js"></script>
+        <script src="./component/footer.js"></script>
+        <script src="./component/whyCard.js"></script>
+        <script src="./component/payPlan.js"></script>
+        <script src="./js/main.js"></script>
+        <script>
+            //change header background color
+            window.onscroll = function() {scrollFunction()};
+            document.querySelector("header").style.backgroundColor = "transparent";
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+                }else {
+                    document.querySelector("header").style.backgroundColor = "transparent";
+                }
+            }
+        </script>
+	</body>
+</html>
