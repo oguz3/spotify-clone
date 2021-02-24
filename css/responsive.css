@@ -6,6 +6,9 @@
     .Everywhere .platform_link{
         display: block;
     }
+    .top-solution-inner br{
+        display: none;
+    }
 }
 @media screen and (max-width: 992px) {
 	.container {

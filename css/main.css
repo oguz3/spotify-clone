@@ -640,7 +640,147 @@ header {
     text-decoration: underline;
 }
 /*Download*/
-
+/*Help*/
+.Search{
+    padding: 0 8px 24px;
+    background: url(../assets/search-mobile.webp) top/100% no-repeat #1c2963;
+}
+@media (min-width: 768px){
+    .Search{
+        background-image: url(../assets/search-desktop.webp);
+    }
+}
+.Search .container{
+    text-align: center;
+    text-align: -webkit-center;
+}
+.Search h1{
+    padding: 80px 0 40px;
+    font-size: 64px;
+    line-height: 72px;
+    margin: 0;
+    color: white;
+}
+.searchInputBox{
+    position: relative;
+    width: 744px;
+}
+.seacrhIcon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(179, 179, 179);
+    left: 12px;
+    height: 24px;
+}
+.seacrhIcon svg{
+    stroke-width: 1pt;
+    color: rgb(179, 179, 179);
+}
+.seacrhIcon [stroke="#181818"] {
+    stroke: currentcolor;
+}
+.searchInputBox .search-input{
+    appearance: none;
+    background-image: none;
+    border: 0px;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin-top: 0px;
+    border-radius: 4px;
+    padding: 14px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(179 179 179) 0px 0px 0px 1px inset;
+    color: rgb(24, 24, 24);
+    margin-bottom: 24px;
+    padding-left: 48px;
+}
+.searchInputBox .search-input:focus {
+    outline: none;
+}
+.top-solution{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 30px 0 40px;
+    text-align: center;
+}
+.top-solution h3{
+    margin: 8px 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: .1em;
+    color: rgb(217, 217, 217);
+}
+.top-solution a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.Help-links{
+    background-color: #eee;
+    padding: 30px 0 40px;
+}
+.links_boxs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.link_box h3{
+    font-size: 24px;
+    line-height: 32px;
+    padding: 16px;
+    margin: 0;
+}
+.link_box span{
+    padding: 0 16px;
+    display: block;
+}
+.link_box a{
+    display: block;
+    color: #2d46b9;
+    text-decoration: none;
+    padding-bottom: 12px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.visitCommunity{
+    padding: 80px 16px;
+}
+.visitCommunity .container{
+    text-align: center;
+}
+.visitCommunity h1{
+    font-size: 48px;
+    line-height: 56px;
+    padding: 0px 0px 0.67em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.visitCommunity p{
+    max-width: 600px;
+    margin: 0 auto 16px;
+    font-size: 18px;
+    padding: 0px 0px 1em;
+    font-weight: 500;
+}
+.visitCommunity .black_btn{
+    background-color: rgb(45, 70, 185);
+    border: 0px !important;
+    min-width: 0px;
+    margin: 0px;
+}
+/*Help*/
 /*
     Footer
 */
