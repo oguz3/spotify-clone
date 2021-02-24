@@ -2,6 +2,10 @@
 	.container {
 		width: 970px;
 	}
+    .Everywhere .platform_name,
+    .Everywhere .platform_link{
+        display: block;
+    }
 }
 @media screen and (max-width: 992px) {
 	.container {
