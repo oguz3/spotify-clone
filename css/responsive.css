@@ -159,6 +159,21 @@
     }
 }
 @media screen and (max-width: 768px) {
+    .Everywhere .platform_name, .Everywhere .platform_link {
+        display: flex;
+        flex-direction: column;
+        padding-inline-start: 0px;
+    }
+    .Everywhere .platform_name li:not(:last-child)::after, 
+    .Everywhere .platform_link li:not(:last-child)::after {
+        content: none;
+    }
+    .download {
+        padding: 40px 15px 40px;
+    }
+    .download img {
+        margin-top: 14px;
+    }
     .visitCommunity {
         padding: 60px 0px;
     }
@@ -217,6 +232,14 @@
     }
 }
 @media screen and (max-width: 576px) {
+    .phoneNtablet h3 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .Everywhere h3 {
+        font-size: 28px;
+        line-height: 36px;
+    }
     .Search h1 {
         font-size: 36px;
         line-height: 48px;
