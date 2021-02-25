@@ -9,6 +9,9 @@
     .top-solution-inner br{
         display: none;
     }
+    .premium-head .container {
+        padding: 72px 15px;
+    }
 }
 @media screen and (max-width: 992px) {
 	.container {
@@ -103,6 +106,15 @@
         width: 44px;
         height: 44px;
     }
+    .why-cards {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 50px;
+        margin-top: 62px;
+    }
+    .plans-container {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 225px;
+    }
 }
 @media screen and (max-width: 768px) {
     .home_cards {
@@ -115,8 +127,51 @@
 	.home_links .container.links {
         grid-template-columns: 1fr;
     }
+    .premium-head h1 {
+        font-size: 48px;
+    }
+    .title-2 {
+        font-size: 24px;
+    }
+    .premium-head .black_btn {
+        width: 100%;
+        text-align: center;
+    }
+    .title-1 {
+        font-size: 32px;
+    }
+    .why-cards {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+    .plans-text h2 {
+        font-size: 32px;
+    }
+    .plans-container {
+        grid-template-columns: 1fr;
+        row-gap: 225px;
+    }
+    header {
+        background-color: var(--black) !important;
+    }
 }
 @media screen and (max-width: 576px) {
+    .premium-head h1 {
+        font-size: 42px;
+    }
+    .title-2 {
+        font-size: 20px;
+    }
+    .why-premium {
+        padding: 35px 0px 50px 0px;
+    }
+    .plans-container {
+        grid-template-columns: 1fr;
+        row-gap: 200px;
+    }
+    .premium-head {
+        padding-top: 50px;
+    }
     .home_text {
         padding-left: 0px;
         padding-right: 0px;
