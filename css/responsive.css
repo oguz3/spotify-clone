@@ -115,8 +115,65 @@
         grid-template-columns: 1fr 1fr;
         row-gap: 225px;
     }
+    .top-solution {
+        grid-template-columns: 1fr;
+        padding: 20px 0 40px;
+        text-align: left;
+    }
+    .top-solution a {
+        margin-bottom: 5px;
+    }
+    .links_boxs {
+        grid-template-columns: 1fr;
+    }
+    .Help-links {
+        background-color: rgb(255, 255, 255);
+        padding: 0px;
+    }
+    .Help-links .container {
+        padding: 0;
+        max-width: 100%;
+    }
+    .link_box {
+        position: relative;
+        border-bottom: 1px solid #c1c3c6;
+    }
+    .link_box::after {
+        content: ">";
+        position: absolute;
+        top: 21px;
+        right: 16px;
+    }
+    .link_box span {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #eee;
+    }
+    .link_box span a:first-child{
+        padding-top: 16px;
+    }
+    .link_box h3 {
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 @media screen and (max-width: 768px) {
+    .visitCommunity {
+        padding: 60px 0px;
+    }
+    .visitCommunity h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .Search {
+        padding: 0;
+    }
+    .Search h1 {
+        padding: 32px 0 32px;
+        font-size: 44px;
+        line-height: 52px;
+    }
     .home_cards {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
@@ -154,8 +211,16 @@
     header {
         background-color: var(--black) !important;
     }
+    .searchInputBox {
+        position: relative;
+        width: auto;
+    }
 }
 @media screen and (max-width: 576px) {
+    .Search h1 {
+        font-size: 36px;
+        line-height: 48px;
+    }
     .premium-head h1 {
         font-size: 42px;
     }

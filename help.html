@@ -67,7 +67,7 @@
 			<div class="container">
 				<div class="links_boxs">
 					<div class="link_box">
-						<h3 class="title-1">Hesap ve Ödeme</h3>
+						<h3 class="title-1 collapsible">Hesap ve Ödeme</h3>
 						<span>
 							<a href="">Hesap Yardımı</a>
 							<a href="">Ödeme Yardımı</a>
@@ -80,7 +80,7 @@
 						</span>
 					</div>
 					<div class="link_box">
-						<h3 class="title-1">Spotify'ı Kullanma</h3>
+						<h3 class="title-1 collapsible">Spotify'ı Kullanma</h3>
 						<span>
 							<a href="">Başlamak</a>
 							<a href="">Çalma Listeleri</a>
@@ -90,7 +90,7 @@
 						</span>
 					</div>
 					<div class="link_box">
-						<h3 class="title-1">Heryerde Dinle</h3>
+						<h3 class="title-1 collapsible">Heryerde Dinle</h3>
 						<span>
 							<a href="">Hoparlörler</a>
 							<a href="">TV'ler</a>
@@ -109,7 +109,7 @@
 		<!--Visit Community-->
 		<div class="visitCommunity">
 			<div class="container">
-				<h1 class="title-1">Topluluğu Ziyaret Et</h1>
+				<h1 class="title-1">Toplulugu Ziyaret Et</h1>
 				<p>Soruların mı var? Dünya çapında uzman hayranlardan oluşan Topluluğumuzda sorularının yanıtlarını bul!</p>
 				<a class="black_btn" href="#">Yanıtları Bul</a>
 			</div>
@@ -124,5 +124,21 @@
 		<script src="./component/header.js"></script>
 		<script src="./component/footer.js"></script>
 		<script src="./js/main.js"></script>
+		<script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+			
+			for (i = 0; i < coll.length; i++) {
+			  coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.maxHeight){
+				  content.style.maxHeight = null;
+				} else {
+				  content.style.maxHeight = content.scrollHeight + "px";
+				} 
+			  });
+			}
+		</script>
 	</body>
 </html>
